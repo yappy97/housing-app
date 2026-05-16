@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Housing App</h1>
+
+<form action="/add" method="POST">
+<input name="location" placeholder="Location"><br>
+<input name="price" placeholder="Price"><br>
+<input name="type" placeholder="Type"><br>
+<button>Add</button>
+</form>
+
+<hr>
+
+{% for l in listings %}
+<p>{{ l.location }} - {{ l.price }} - {{ l.type }}</p>
+{% endfor %}
+
+</body>
+</html>
